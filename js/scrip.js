@@ -7,20 +7,26 @@
 
  // dichiario variabili
 
+ let elUtente = document.getElementById('utente');
+ let elKilometri = document.getElementById('kilometri');
+ let elAnni = document.getElementById('anni');
+ let elButtonInvia = document.querySelector('.btn-success');
+ let elButtonReset = document.querySelector('.btn.reset');
+
+//  console.log(elUtente, elKilometri,elAnni, elButtonInvia, elButtonReset);
+
+let elContainer = document.querySelector('.container')
+
+// console.log('elContainer'); 
+
+addEventListener('click')
 
 
 
+// let kilometri = parseInt(prompt ('Quanti kilometri vuoi fare?'));
+// let anni = parseInt(prompt('quanti anni hai?'));
+// let prezzoViaggio = 0.21 * kilometri;
 
-
-
-
-
-
-
- 
-//  let kilometri = parseInt(prompt ('Quanti kilometri vuoi fare?'));
-//  let anni = parseInt(prompt('quanti anni hai?'));
-//  let prezzoViaggio = 0.21 * kilometri;
 //  console.log (kilometri,anni,prezzoViaggio)
 
 // //controllo i valori inseriti
