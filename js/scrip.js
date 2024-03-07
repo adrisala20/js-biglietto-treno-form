@@ -7,11 +7,11 @@
 
  // dichiario variabili
 
- let elUtente = document.getElementById('utente');
- let elKilometri = document.getElementById('kilometri');
- let elAnni = document.getElementById('anni');
- let elButtonInvia = document.querySelector('.btn-success');
- let elButtonReset = document.querySelector('.btn.reset');
+ const elUtente = document.getElementById('utente');
+ const elKilometri = document.getElementById('kilometri');
+ const elAnni = document.getElementById('anni');
+ const elButtonInvia = document.querySelector('.btn-success');
+ const elButtonReset = document.querySelector('.btn.reset');
 
 //  console.log(elUtente, elKilometri,elAnni, elButtonInvia, elButtonReset);
 
@@ -21,10 +21,13 @@ let elContainer = document.querySelector('.container')
 
 elButtonInvia.addEventListener('click', function(){
     // console.log('hai cliccato il bottone')
+
     let testo = elUtente.value;
     let kilometri = elKilometri.value;
     let anni = elAnni.value;
     // console.log(testo,kilometri,anni);
+    // elUtente.innerHTML = testo;
+    testo.innerHTML('passeggero')= 
 } )
 
 
