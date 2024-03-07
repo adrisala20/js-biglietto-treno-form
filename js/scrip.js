@@ -19,7 +19,14 @@ let elContainer = document.querySelector('.container')
 
 // console.log('elContainer'); 
 
-addEventListener('click')
+elButtonInvia.addEventListener('click', function(){
+    // console.log('hai cliccato il bottone')
+    let testo = elUtente.value;
+    let kilometri = elKilometri.value;
+    let anni = elAnni.value;
+    // console.log(testo,kilometri,anni);
+} )
+
 
 
 
