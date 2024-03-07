@@ -10,8 +10,10 @@
  const elUtente = document.getElementById('utente');
  const elKilometri = document.getElementById('kilometri');
  const elAnni = document.getElementById('anni');
+ const elPrezzo = document.getElementById ('prezzo');
  const elButtonInvia = document.querySelector('.btn-success');
  const elButtonReset = document.querySelector('.btn.reset');
+ let messaggio='';
 
 //  console.log(elUtente, elKilometri,elAnni, elButtonInvia, elButtonReset);
 
@@ -22,48 +24,24 @@ let elContainer = document.querySelector('.container')
 elButtonInvia.addEventListener('click', function(){
     // console.log('hai cliccato il bottone')
 
+    console.log('click');
     let testo = elUtente.value;
-    let kilometri = elKilometri.value;
+    let kilometri =(elKilometri.value);
     let anni = elAnni.value;
-    // console.log(testo,kilometri,anni);
-    // elUtente.innerHTML = testo;
-    testo.innerHTML('passeggero')= 
-} )
+    let prezzo = parceInt(kilometri * 0.21);
+
+    // applico lo sconto
+    if(anni ==="minorenne"){
+        prezzo = prezzo - (prezzo * 0.20);
+        messagggio = `sconto del 20% applicato `;
+    } else if (anni === "adultoAnziano"){
+        prezzo = prezzo - (prezzo * 0.40);
+        messaggio = `sconto del 40% applicato`;
+    }
+
+    document.getElementById('passeggero').innerHTML = testo
+    document.getelementById('offerta').innerHTML = prezzo.toFixed(2) + '€';
+} );
 
 
-
-
-// let kilometri = parseInt(prompt ('Quanti kilometri vuoi fare?'));
-// let anni = parseInt(prompt('quanti anni hai?'));
-// let prezzoViaggio = 0.21 * kilometri;
-
-//  console.log (kilometri,anni,prezzoViaggio)
-
-// //controllo i valori inseriti
-// if((isNaN(kilometri) && isNaN(anni)) || (isNaN(kilometri) && !isNaN(anni)) || (!isNaN(kilometri) && isNaN(anni))) {
-//     console.log('valore errato'); 
-// } else {
-//     console.log(`i kilometri inseriti sono ${kilometri}, hai
-//     ${anni} anni, prezzo del viaggio ${prezzoViaggio.toFixed(2)}€`);
-// }
-
-// //applico lo sconto 
-// let minorenne = anni < 18;
-// let adultoAnziano = anni >= 65;
-// let messaggio =(`i kilometri inseriti sono ${kilometri}, hai ${anni} anni, il prezzo viaggio è ${prezzoViaggio.toFixed(2)}€`);
-
-// if (minorenne) {
-//     prezzoViaggio = (prezzoViaggio - (prezzoViaggio * 0.020));
-//     messaggio = `hai diritto ad uno sconto! i kilometri inseriti sono ${kilometri} , i tuoi anni sono ${anni} anni , il prezzo viaggio scontato è ${prezzoViaggio.toFixed(2)}€`;
-
-//     console.log(messaggio); 
-//  } else if (adultoAnziano){
-//     prezzoViaggio = (prezzoViaggio - (prezzoViaggio * 0.040));
-//     messaggio = `hai diritto ad uno sconto! i kilometri inseriti sono ${kilometri} , i tuoi anni sono ${anni} anni, il prezzo viaggio scontato è ${prezzoViaggio.toFixed(2)}€`;
-
-//     console.log(messaggio);
-//  }
-
-// document.getElementById('price').innerHTML = ` <h1> Biglietto Uber</h1>
-// <h3>${messaggio}</h3>
-// `;
+/* ho problemi con javascript */
